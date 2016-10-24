@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{273DD4BE-60BF-4AB5-9DAB-AE80443D6FF3}</ProjectGuid>
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SCISQL_C_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SCISQL_C_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\geometry.c" />
+    <ClCompile Include="src\htm.c" />
+    <ClCompile Include="src\select.c" />
+    <ClCompile Include="src\udfs\abMagToDn.c" />
+    <ClCompile Include="src\udfs\abMagToDnSigma.c" />
+    <ClCompile Include="src\udfs\abMagToFlux.c" />
+    <ClCompile Include="src\udfs\abMagToFluxSigma.c" />
+    <ClCompile Include="src\udfs\angSep.c" />
+    <ClCompile Include="src\udfs\dnToAbMag.c" />
+    <ClCompile Include="src\udfs\dnToAbMagSigma.c" />
+    <ClCompile Include="src\udfs\dnToFlux.c" />
+    <ClCompile Include="src\udfs\dnToFluxSigma.c" />
+    <ClCompile Include="src\udfs\extractInt64.c" />
+    <ClCompile Include="src\udfs\fluxToAbMag.c" />
+    <ClCompile Include="src\udfs\fluxToAbMagSigma.c" />
+    <ClCompile Include="src\udfs\fluxToDn.c" />
+    <ClCompile Include="src\udfs\fluxToDnSigma.c" />
+    <ClCompile Include="src\udfs\getVersion.c" />
+    <ClCompile Include="src\udfs\median.c" />
+    <ClCompile Include="src\udfs\percentile.c" />
+    <ClCompile Include="src\udfs\raiseError.c" />
+    <ClCompile Include="src\udfs\s2CircleHtmRanges.c" />
+    <ClCompile Include="src\udfs\s2CPolyHtmRanges.c" />
+    <ClCompile Include="src\udfs\s2CPolyToBin.c" />
+    <ClCompile Include="src\udfs\s2HtmId.c" />
+    <ClCompile Include="src\udfs\s2HtmLevel.c" />
+    <ClCompile Include="src\udfs\s2PtInBox.c" />
+    <ClCompile Include="src\udfs\s2PtInCircle.c" />
+    <ClCompile Include="src\udfs\s2PtInCPoly.c" />
+    <ClCompile Include="src\udfs\s2PtInEllipse.c" />
+    <ClCompile Include="src\util\index.c" />
+    <ClCompile Include="test\testHtm.c" />
+    <ClCompile Include="test\testSelect.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.h" />
+    <ClInclude Include="src\geometry.h" />
+    <ClInclude Include="src\htm.h" />
+    <ClInclude Include="src\photometry.h" />
+    <ClInclude Include="src\select.h" />
+    <ClInclude Include="src\udf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc\index.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

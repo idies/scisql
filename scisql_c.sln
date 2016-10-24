@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scisql_c", "scisql_c.vcxproj", "{273DD4BE-60BF-4AB5-9DAB-AE80443D6FF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{273DD4BE-60BF-4AB5-9DAB-AE80443D6FF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{273DD4BE-60BF-4AB5-9DAB-AE80443D6FF3}.Debug|Win32.Build.0 = Debug|Win32
+		{273DD4BE-60BF-4AB5-9DAB-AE80443D6FF3}.Release|Win32.ActiveCfg = Release|Win32
+		{273DD4BE-60BF-4AB5-9DAB-AE80443D6FF3}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
